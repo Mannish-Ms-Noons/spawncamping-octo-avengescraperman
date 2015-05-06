@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/volatility', function(req, res, next){
+  console.log(req.query);
+  res.json(req.query);
+});
 module.exports = router;

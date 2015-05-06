@@ -1,1 +1,14 @@
-console.log("hello");
+stocks = {'GOOG': 500}
+
+// $.get('/volatility', stocks, function(data){
+//   console.log("success");
+// });
+
+$.ajax({
+  url: "/volatility",
+  data: {'GOOG': 500},
+  contentType: 'text/json',
+  success: function(data){
+    console.log("success: " + data);
+  }
+});
