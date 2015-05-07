@@ -3,8 +3,8 @@ var returnOption = $.Event("option");
 
 function getOptionObject(ticker, expiryDay, expiryMonth, expiryYear){
     var url = "http://www.google.com/finance/option_chain?q="
-    + ticker 
-    + "&expd=" 
+    + ticker
+    + "&expd="
     + expiryDay
     + "&expm="
     + expiryMonth
@@ -13,9 +13,7 @@ function getOptionObject(ticker, expiryDay, expiryMonth, expiryYear){
     + "&ei=&output=json";
     $.get(url,function(data){
         $("body").trigger(returnOptions);
-        currentOption = data; 
+        currentOption = data;
         console.log(data);
     });
 }
-
-

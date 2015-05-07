@@ -9,6 +9,8 @@ $.ajax({
   data: {'GOOG': 500},
   contentType: 'text/json',
   success: function(data){
-    console.log("success: " + data);
+    console.log(JSON.stringify(data));
+    console.log(data.vol)
+    $('#vol').text(data.vol);
   }
 });
